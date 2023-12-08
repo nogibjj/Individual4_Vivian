@@ -11,15 +11,15 @@ openai.api_key = os.getenv("OPENAI_KEY")
 
 @app.route("/")
 def index():
-
     return render_template("index.html")
 
-
-@app.route("/team")
+@app.route("/submitTrip")
 def team():
-    selected = request.args.get("selectedOption")
+    dest = request.args.get("destination")
+    numTravelers = request.args.get("numTravelers")
+    duration = request.args.get("duration")
     ## TODO call OpenAI API, get a introduction
-    prompt = f"give me a short introduction for {selected}"
+    prompt = f"give me a brief travel plan for {numTravelers} people to {dest} for {duration} days."
     messages = [{"role": "user", "content": prompt}]
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
@@ -27,7 +27,7 @@ def team():
         temperature=0,
     )
     rslt = response.choices[0].message["content"]
-    return render_template("result.html", selected=selected, intro=rslt)
+    return render_template("result.html", intro=rslt)
 
 
 def a():
