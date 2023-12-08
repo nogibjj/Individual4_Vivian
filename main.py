@@ -19,7 +19,7 @@ def team():
     numTravelers = request.args.get("numTravelers")
     duration = request.args.get("duration")
     ## TODO call OpenAI API, get a introduction
-    prompt = f"give me a brief travel plan for {numTravelers} people to {dest} for {duration} days."
+    prompt = f"give me a 100-word travel plan for {numTravelers} people to {dest} for {duration} days."
     messages = [{"role": "user", "content": prompt}]
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
