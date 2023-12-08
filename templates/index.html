@@ -1,24 +1,42 @@
-<body>
-    <label for="destination">Destination:</label><br>
-    <input type="text" id="destination" name="destination"><br>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plan For Your Trip</title>
+    <script type="text/javascript">
+        function clearFields() {
+            document.getElementById("destination").value = "";
+            document.getElementById("numTravelers").value = "";
+            document.getElementById("duration").value = "";
+        }
 
-    <label for="numTravelers">Number of Travelers:</label><br>
-    <input type="number" id="numTravelers" name="numTravelers"><br>
-
-    <label for="duration">Travel Duration (days):</label><br>
-    <input type="number" id="duration" name="duration"><br><br>
-
-    <button type="button" onclick="submitTripPlan()">Submit Plan</button>
-
-    <script>
-        function submitTripPlan() {
+        function submitForm() {
             var destination = document.getElementById('destination').value;
             var numTravelers = document.getElementById('numTravelers').value;
             var duration = document.getElementById('duration').value;
-            
+
             // Assuming you want to send these values as query parameters to a URL
             window.location.href = '/submitTrip?destination=' + encodeURIComponent(destination) + '&numTravelers=' + encodeURIComponent(numTravelers) + '&duration=' + encodeURIComponent(duration);
         }
     </script>
+</head>
+<body>
+
+    <h1>Plan For Your Trip</h1>
+
+    <form id="tripForm">
+        <label for="destination">Destination:</label><br>
+        <input type="text" id="destination" name="destination"><br>
+
+        <label for="numTravelers">Number of Travelers:</label><br>
+        <input type="number" id="numTravelers" name="numTravelers"><br>
+
+        <label for="duration">Travel Duration (days):</label><br>
+        <input type="number" id="duration" name="duration"><br><br>
+
+        <input type="button" value="Submit" onclick="submitForm()">
+        <input type="button" value="Clear" onclick="clearFields()">
+    </form> 
+
 </body>
+</html>
 
