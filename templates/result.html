@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta chaset="UTF-8">
-    <meta name="" viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here is your plan:</title>
 </head>
-
 <body>
-    <div>
-        <h1>{{ selected }}</h1>
-    </div>
-    <div>
-        {{ intro }}
-    </div>
-    <button id="submitButton" onclick="bakcHome()">Home</button>
-    <script>
-        function bakcHome() {
-            // var selectedValue = document.getElementById('myDropdown').value;
-            window.location.href = '/';
-        }
-    </script>
-</body>
 
+    <h1>Here is your plan:</h1>
+    <div id="planDetails">
+        <!-- Plan details can be dynamically inserted here -->
+    </div>
+    
+    <br>
+    <button onclick="window.history.back();">Return</button>
+
+</body>
 </html>
