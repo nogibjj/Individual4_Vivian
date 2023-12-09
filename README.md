@@ -5,6 +5,10 @@
 
 https://plantripforyou.azurewebsites.net
 
+## Youtube link
+
+https://youtu.be/7ih0NNKwREw
+
 ## Overview
 
 The purpose of this individual project is to build and deploy a scaleable web-hosted app that will allow me to apply my Flask knowledge from previous lessons. Within the web app, we call the ChatGPT-3.5 API as a Large Language Model (LLM) to implement our functionality. This project allows user to enter the destination, Number of Travelers, Travel Duration(days) and receive a travel plan. 
