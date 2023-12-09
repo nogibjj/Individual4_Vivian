@@ -35,48 +35,31 @@ In this project, the API of OpenAI is integrated in the app. A token was generat
 
 ## Result of `make lint`, `make format`, `make test`
 
-![rslt](./resources/rslt.png)
+<img width="964" alt="截屏2023-12-09 上午9 02 42" src="https://github.com/nogibjj/Individual4_Vivian/assets/143654445/d9fcfa5d-7592-48fb-a13f-bf93215f21dc">
 
 ## Containerization
 
-To make the project easy to deploy, it is containerized with docker.
+To make the project easy to deploy, it is containerized with docker. I uploaded a docker image in docker hub. Here is what this project's repository looks like after the push.
 
-First, login to Docker Hub in terminal using the following command.
+<img width="1275" alt="截屏2023-12-09 上午9 06 52" src="https://github.com/nogibjj/Individual4_Vivian/assets/143654445/0d978402-5b0e-4e1e-938d-e5c93fe83032">
 
-`docker login --username <username>`
+The steps of creating a image: 
+- login to Docker Hub in terminal `docker login --username <username>`
 
-A successful login should look like this:
+- Then the files in the project directory is packed into a docker image: `docker docker build -t <username>/<repo name> .`
 
-![dockerhub_login](./resources/docker_login.png)
-
-Then the files in the project directory is packed into a docker image using the following command:
-
-`docker docker build -t <username>/<repo name> .`
-
-The result should look like this:
-
-![docker_image_result](./resources/docker_img_rslt.png)
-
-Then the image is pushed to Docker Hub using the following command:
-
-`docker push <username>/<repo name>`
-
-It can be verified that the image is successfully uploaded by checking the repository.
-
-Here is what this project's repository looks like after the push.
-
-![docker_hub_repo](./resources/dockehub.png)
+- Push the image to Docker Hub: `docker push <username>/<repo name>`
 
 ## Deployment
 
 The website is then deployed to Azure. Make sure to add the LLM API key, and the website port `WEBSITES_PORT` to the configuration.
+Below is my Azure web application: 
 
-Here is a screenshot for the Azure page.
+<img width="1312" alt="截屏2023-12-09 上午9 10 09" src="https://github.com/nogibjj/Individual4_Vivian/assets/143654445/7e7df3c9-a638-43a6-83bc-27d31c45e5d0">
 
-![azure](./resources/nbateamsintro.png)
 
 ## Reference
-[Professor Noah's ruff template](https://github.com/nogibjj/python-ruff-template)
+[ruff template](https://github.com/nogibjj/python-ruff-template)
 
 
 
