@@ -1,4 +1,4 @@
-# README [![CI](https://github.com/nogibjj/Individual_Proj_4_Gavin_Li/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Individual_Proj_4_Gavin_Li/actions/workflows/cicd.yml)
+# README [![CI](https://github.com/nogibjj/Individual4_Vivian/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Individual4_Vivian/actions/workflows/cicd.yml)
 
 
 ## Website link
